@@ -3,86 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gramíneas Forrageiras</title>
+    <title>Brachiarias</title>
     <link rel="stylesheet" href="./lib/cdn.jsdelivr.net_npm_bootstrap@5.3.1_dist_css_bootstrap.min.css">
     <style>
-        .carousel-inner {
-            overflow: hidden; /* Oculta elementos que ultrapassam o contêiner */
-        }
-
-        .carousel-inner .carousel-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .carousel-inner .carousel-item img {
-            max-width: 50%;
-            object-fit: cover;
-        }
-
         .carousel-item {
-            display: flex;
-            flex-direction: row; /* Organiza os itens em uma linha */
-            justify-content: flex-start;
-            align-items: center;
-            opacity: 0; /* Oculta inicialmente todos os itens do carrossel */
-            position: absolute; /* Posiciona absolutamente os itens do carrossel */
-            width: 100%; /* Garante que o item do carrossel ocupe toda a largura */
-        }
-        
-        .carousel-item.active {
-            opacity: 1; /* Mostra apenas o item ativo */
-            position: relative; 
-            /* Posiciona relativamente o item ativo */
+            opacity: 0;
         }
 
-        .carousel-caption {
-            color: #000;
-            position: static;
-            text-align: left;
-            max-width: 50%;
-            margin-left: 15px;
+        .carousel-item.active{
+            opacity: 1;
         }
 
         article h4 {
             height: 85px;
             align-items: center;
         }
-
-        @media (max-width: 768px) { /* Ajuste o valor de acordo com a largura que desejar */
-        .carousel-item {
-        flex-direction: column; /* Alinha verticalmente em telas menores */
-        }
-
-        .carousel-inner .carousel-item img {
-        max-width: 100%; /* Permite que a imagem ocupe toda a largura em telas menores */
-        width: auto;
-        height: auto;
-        }
-
-        .carousel-caption {
-        height: 519px;
-        max-width: 100%; /* Permite que a legenda ocupe toda a largura em telas menores */
-        margin-left: 0; /* Remove a margem esquerda em telas menores */
-        }
-}
     </style>
 </head>
 <body>
     <header class="container bg-success p-3">
         <div class="row">
             <div class="col text-center text-white">
-                <h1>Gramíneas Forrageiras</h1>
+                <h1>Brachiarias</h1>
             </div>
         </div>
     </header>
-    <section class="container mb-4 bg-success pb-3">
+    <section class="container mb-4 bg-success-subtle pb-3">
         <div class="row">
-            <div class="carousel slide justify-content-center" data-bs-ride="carousel" id="primeiro-carousel">
-                <div class="carousel-inner bg-success-subtle">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="./imagens/marandu-areatotal.webp" alt="">
-                        <div class="carousel-caption">
+            <div class="carousel slide" data-bs-ride="carousel" id="primeiro-carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/marandu-areatotal.webp" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>Marandu, Braquiarão ou Brizantão</h2>
                             <h4>Vantagens</h4>
                             <p>Resistente às cigarrinhas típicas das pastagens (Deois flavopicta e Notozulia entreriana); Elevada produção de forragem; Boa cobertura do solo; Boa capacidade de competição com invasoras; Responsivo à adubação.</p>
@@ -90,9 +44,11 @@
                             <p>Não apresenta resistência à cigarrinha da cana-de-açucar (gênero Mahanarva); Não tolera solos mal drenados e/ou encharcados.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 " src="./imagens/xaraes-areatotal.jpg" alt="">
-                        <div class="carousel-caption">
+                    <div class="carousel-item row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/xaraes-areatotal.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>Xaraés, MG-5 Vitória ou Toledo</h2>
                             <h4>Vantagens</h4>
                             <p>Elevada produtividade, especialmente de folhas; Rápida rebrota e florescimento tardio, prolongando o período de pastejo nas águas; Elevada capacidade de suporte no periodo chuvoso resultando em maior produção animal por área em relação a B. brizantha cv. Marandu; Adapta-se bem a solos arenosos. </p>
@@ -100,9 +56,11 @@
                             <p>Resistência mediana às cigarrinhas típicas das pastagens. Não apresenta resistência à cigarrinha da cana-de-açucar (gênero Mahanarva); Não tolera solos mal drenados e/ou encharcados; Menor valor nutritivo que reflete em menor ganho animal individual em relação as demais cultivares de Brachiaria brizantha.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 " src="./imagens/piata-areatotal.jpg" alt="">
-                        <div class="carousel-caption">
+                    <div class="carousel-item row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/piata-areatotal.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>BRS Piatã</h2>
                             <h4>Vantagens</h4>
                             <p>Elevada taxa de crescimento foliar, maior disponibilidade de folhas sob pastejo, resistência às cigarrinhas típicas das pastagens; Melhor acabamento dos animais, valor nutritivo superior (principalmente no periodo seco); Alternativa para sistemas integrados (crescimento inicial mais lento, bom acúmulo de forragem no periodo seco); Florescimento precoce (jan/Fev) permitindo a recuperação das plantas e a produção de forragem de boa qualidade no final do periodo das chuvas e início de seca; Consorcia-se bem com Estilosantes Campo Grande.</p>
@@ -110,9 +68,11 @@
                             <p>Não apresenta resistência à cigarrinha da cana-de-açucar (gênero Mahanarva); Não tolera solos mal drenados e/ou encharcados.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 object-fit-cover" src="./imagens/paiaguas-areatotal.jpeg" alt="">
-                        <div class="carousel-caption">
+                    <div class="carousel-item row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/paiaguas-areatotal.jpeg" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>BRS Paiaguás</h2>
                             <h4>Vantagens</h4>
                             <p>Elevado perfilhamento basal, comos finos e maior disponibilidade de folhas de melhor valor nutritivo no periodo seco; Período seco: maior ganho de peso por animal e por área, em relação a outras cultivares de B. brizanha; Alternativa para sistemas integrados: consorcia bem com milho safrinha para produção de forragem de outono-inverno e/ou de palhada para plantio direto. Fácil dessecação. (semelhante a B. ruziziensis); Florescimento super precoce (dez) permitindo a recuperação das plantas e a produção de forragem de boa qualidade no final do periodo das chuvas e início de seca;</p>
@@ -120,9 +80,11 @@
                             <p>Não apresenta  resistência as cígarrinhas típicas das pastagens. Não recomendada para áreas com histórico de altas infestações de cigarrinhas; Não apresenta resistência à cigarrinha da cana-de-açucar (gênero Mahanarva).</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 " src="./imagens/llanero-areatotal.jpg" alt="">
-                        <div class="carousel-caption">
+                    <div class="carousel-item row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/llanero-areatotal.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>LIanero, Lhanero ou Dictyoneura</h2>
                             <h4>Vantagens</h4>
                             <p>Tolerância à solos com alagamento temporário e/ou encharcados; Adapta-se bem a solos de baixa fertilidade natural.</p>
@@ -130,9 +92,11 @@
                             <p>Menor valor nutritivo do que outras braquiárias; Multiplica cigarrinhas típicas das pastagens, porém tolera ataque em condições de campo; Estabelecimento Lento.</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100 " src="./imagens/humidicola-areatotal.jpg" alt="">
-                        <div class="carousel-caption">
+                    <div class="carousel-item row d-flex">
+                        <div class="col-lg-6 mt-3">
+                            <img class="w-100" src="./imagens/humidicola-areatotal.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 mt-3">
                             <h2>Humidicola comum, Tuly ou Quicuio da Amazônia</h2>
                             <h4>Vantagens</h4>
                             <p>Tolerância à solos com alagamento temporário e/ou encharcados; Adapta-se bem a solos de baixa fertilidade natural.</p>
@@ -152,7 +116,7 @@
     </section>
     <section class="container">
         <div class="row">
-            <article class="col-lg-4 col-md-6 col-sm-12 mb-4 ">
+            <article id="marandu" class="col-lg-4 col-md-6 col-sm-12 mb-4 ">
                 <div class="card bg-success-subtle">
                     <div class="card-header">
                         <h4 class="card-title d-flex justify-content-center text-center">
@@ -292,7 +256,7 @@
                     </footer>
                 </div>
             </article>
-            <article class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <article id="humidicola" class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card bg-success-subtle">
                     <div class="card-header">
                         <h4 class="card-title d-flex justify-content-center text-center">
